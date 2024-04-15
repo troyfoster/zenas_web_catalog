@@ -3,7 +3,7 @@ import snowflake.connector
 
 streamlit.title('My Parents\' New Healthy Diner')
 
-my_conx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("select current_user(), current_account(), current_region()")
 my_data_row = my_cur.fetchone()
