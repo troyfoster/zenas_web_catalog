@@ -15,7 +15,7 @@ my_cur = my_cnx.cursor()
 #streamlit.text(my_data_row)
 
 # Run a Snowflake query and put it all in a var called my_catalog
-my_cur.execute("select color_or_style from catalog_for_website")
+my_cur.execute("select color_or_style from catalog_for_website;")
 my_catalog = my_cur.fetchall()
 
 # Put the dafta into a dataframe
